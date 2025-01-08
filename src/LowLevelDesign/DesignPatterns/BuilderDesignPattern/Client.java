@@ -2,15 +2,16 @@ package LowLevelDesign.DesignPatterns.BuilderDesignPattern;
 
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String args[]){
 
-        Director director1 = new Director(new EngineeringStudentBuilder());
-        Director director2 = new Director(new MBAStudentBuilder());
+        Director directorObj1 = new Director(new EngineeringStudentBuilder());
+        Director directorObj2 = new Director(new MBAStudentBuilder());
 
-        Student engineeringStudent = director1.createStudent();
-        Student mbaStudent = director2.createStudent();
+        Student engineerStudent = directorObj1.createStudent();
+        Student mbaStudent =directorObj2.createStudent();
 
-        System.out.println(engineeringStudent.toString());
+        System.out.println(engineerStudent.toString());
         System.out.println(mbaStudent.toString());
+
     }
 }

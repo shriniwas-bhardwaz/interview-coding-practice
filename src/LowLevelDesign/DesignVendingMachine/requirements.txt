@@ -1,0 +1,33 @@
+* Basic Functionality :
+- Should the vending machine accept money and dispense items ?
+- Should it provide change if customer overpays?
+
+* Items and Inventory :
+- How many different types of item can it store ?
+- should it track inventory levels?
+
+* State design pattern is used
+
+1. User clicks on Insert Coin Button.
+2. User inserts coin into vending machine.
+3. User clicks on Start Product Selection Button
+4. User selects a product.
+5. Product is dispensed to the user and change is returned if user overpays.
+6. Inventory is updated  once the product is sold out.
+7. If user wants to cancel before order is dispensed give refund.
+
+
+Entities
+- Coin
+- ItemType
+- Item
+- ItemShelf
+- Inventory
+- VendingMachine
+
+State interface implementations
+- IdleState
+- SelectionState
+- HasMoneyState
+- DispenseState
+

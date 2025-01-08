@@ -8,7 +8,7 @@ public abstract class StudentBuilder {
     int age;
     String name;
     String fatherName;
-    String  motherName;
+    String motherName;
     List<String> subjects;
 
     public StudentBuilder setRollNumber(int rollNumber) {
@@ -41,4 +41,5 @@ public abstract class StudentBuilder {
     public Student build() {
         return new Student(this);
     }
+
 }
