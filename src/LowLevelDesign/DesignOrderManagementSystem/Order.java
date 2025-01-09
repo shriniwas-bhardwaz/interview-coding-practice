@@ -7,7 +7,7 @@ public class Order {
     User user;
     Address deliveryAddress;
     Map<Integer, Integer> productCategoryAndCountMap;
-    Warehouse warehouse;
+    Warehouse warehouse; // This order will be fulfilled by which warehouse.
     Invoice invoice;
     Payment payment;
     OrderStatus orderStatus;

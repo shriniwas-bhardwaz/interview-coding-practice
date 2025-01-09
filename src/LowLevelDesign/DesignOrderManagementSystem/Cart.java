@@ -23,7 +23,7 @@ public class Cart {
     }
 
 
-    //remove item to cart
+    //remove item from cart
     public void removeItemFromCart(int productCategoryId, int count) {
 
         if (productCategoryIdVsCountMap.containsKey(productCategoryId))

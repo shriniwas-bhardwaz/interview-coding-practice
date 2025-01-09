@@ -1,0 +1,23 @@
+Requirements Gathering
+1. User will come into my app , select his/her city.
+2. Then the theatres and movies released in those theatres will be suggested to user.
+3. Users select a movie and check the different timing for movies in all the nearby theatres.
+4. User selects a particular date and time for a movie in his/her own choice of theatre.
+6. Then the user will select the seats. Once the user selects the seat we lock those seats using
+BMS or other mechanism for the next 10 minutes.
+7. If the user continues with booking he will make the payment for those seats and
+booking will be completed.
+
+Entities
+- City
+- Movie
+- Theatre
+- Show
+- Screen
+- Seat
+- Seat Category
+- Booking
+- Payment
+- Movie Controller
+- Theatre Controller
+

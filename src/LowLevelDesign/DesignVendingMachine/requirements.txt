@@ -6,6 +6,10 @@
 - How many different types of item can it store ?
 - should it track inventory levels?
 
+* Payment options :
+- Does it accept only coins or other forms of payment like cards, digital wallets,etc. ?
+
+
 * State design pattern is used
 
 1. User clicks on Insert Coin Button.
@@ -24,8 +28,9 @@ Entities
 - ItemShelf
 - Inventory
 - VendingMachine
+** At last main class
 
-State interface implementations
+Vending States interface implementations
 - IdleState
 - SelectionState
 - HasMoneyState

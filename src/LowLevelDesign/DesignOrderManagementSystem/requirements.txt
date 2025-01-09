@@ -1,0 +1,41 @@
+Requirements Gathering
+1. View Product / Category
+2. Add Product to Cart
+3. Place Order - Invoice will be generated
+3.1 There will be multiple warehouses. And my products in cart can't be from
+    different warehouses. So while viewing we have to show products from a single warehouse.
+4. Payment / Checkout
+
+Objects finding
+1. User
+2. Product
+3. Cart
+4. Order
+5. Invoice
+6. Payment
+7. Inventory - As we can have many products
+8. Warehouse
+
+
+How to go?
+1. Product
+2. ProductCategory
+3. Inventory
+4. Warehouse
+5. Address
+6. Warehouse Controller
+7. Warehouse Selection Strategy
+8. Nearest Warehouse Selection Strategy
+9. User
+10. UserController
+11. Cart
+12. Order
+13. Invoice
+14. Payment
+15. PaymentMode
+16. OrderStatus
+17. OrderController
+18. ProductDeliverySystem
+19. Main
+
+

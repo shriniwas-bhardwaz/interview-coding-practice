@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// In a system there can be many orders, so we have to use Order Controller.
 public class OrderController {
 
     List<Order> orderList;

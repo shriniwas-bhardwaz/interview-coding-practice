@@ -2,6 +2,7 @@ package LowLevelDesign.DesignOrderManagementSystem;
 
 import java.util.List;
 
+//In a system there can be many users.
 public class UserController {
 
     List<User> userList;

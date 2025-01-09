@@ -1,0 +1,14 @@
+
+Object identification
+- Splitwise
+- User
+- Group
+- Expense
+- Split ??
+- Balance Sheet
+
+Take Bottom Up approach
+
+first Expense
+SplitType enum
+Split

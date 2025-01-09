@@ -18,8 +18,7 @@ public abstract class Piece {
 
     public abstract List<Square> getValidMoves(ChessBoard board);
 
-    public abstract char getSymbol();
-
+    public abstract boolean isValidMove(Move move,ChessBoard board);
     public boolean isSameColor(Piece other) {
         return this.color == other.color;
     }

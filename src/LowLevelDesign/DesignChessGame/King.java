@@ -21,7 +21,7 @@ public class King extends Piece{
             int newCol = getPosition().getCol() + dir[1];
             try {
                 Square target = board.getSquare(newRow, newCol);
-//                if(target.isEmpty() || target.getPiece() != this.isWhite()) {
+//                if(target.isEmpty() || target.getPiece() != this.isSameColor(target.getPiece())r)) {
 //                    validMoves.add(target);
 //                }
             } catch(Exception e) {
@@ -32,7 +32,11 @@ public class King extends Piece{
     }
 
     @Override
-    public char getSymbol() {
-        return 'K';
+    public boolean isValidMove(Move move, ChessBoard board) {
+        int x = Math.abs(move.getStartSquare().getRow() - move.getEndSquare().getRow());
+        int y = Math.abs(move.getStartSquare().getCol() - move.getEndSquare().getCol());
+        return (x<=1 && y<=1);
     }
+
+
 }
