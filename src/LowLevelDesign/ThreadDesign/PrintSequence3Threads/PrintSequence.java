@@ -15,7 +15,7 @@ public class PrintSequence implements Runnable{
 
     @Override
     public void run() {
-        while(true) {
+        while(number < MAX_COUNT) {
             synchronized (lock) {
                 while(number % totalThreads != threadId) {
                     try {
@@ -24,11 +24,6 @@ public class PrintSequence implements Runnable{
                         Thread.currentThread().interrupt();
                         return;
                     }
-                }
-
-                if(number > MAX_COUNT) {
-                    lock.notify();
-                    break;
                 }
 
                 System.out.println("Thread " + threadId + ": "+ number++);

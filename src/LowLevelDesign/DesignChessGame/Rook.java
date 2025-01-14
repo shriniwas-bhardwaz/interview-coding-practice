@@ -12,12 +12,14 @@ public class Rook extends Piece {
         return getSquares();
     }
 
+    @Override
+    public boolean isValidMove(Move move, ChessBoard board) {
+        return false;
+    }
+
     private static List<Square> getSquares() {
         return List.of();
     }
 
-    @Override
-    public char getSymbol() {
-        return 0;
-    }
+   
 }

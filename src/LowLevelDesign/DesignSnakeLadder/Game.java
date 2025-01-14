@@ -15,8 +15,8 @@ public class Game {
     }
 
     private void initializeGame() {
-        board = new Board(10,5,4);
-        dice = new Dice(1);
+        board = new Board(10,5,6);
+        dice = new Dice(2);
         winner = null;
         addPlayers();
     }
@@ -46,7 +46,7 @@ public class Game {
             playerTurn.currentPosition = playerPosition;
 
         System.out.println("player turn is: " + playerTurn.getName() + " new position is: "+ playerTurn.getCurrentPosition());
-        if(playerPosition == board.cells.length * board.cells.length - 1) {
+        if(playerPosition >= board.cells.length * board.cells.length - 1) {
             winner = playerTurn;
         }
 

@@ -13,7 +13,9 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public char getSymbol() {
-        return 0;
+    public boolean isValidMove(Move move, ChessBoard board) {
+        return false;
     }
+
+
 }
