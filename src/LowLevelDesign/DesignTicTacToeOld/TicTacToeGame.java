@@ -1,8 +1,8 @@
-package LowLevelDesign.DesignTicTacToe;
+package LowLevelDesign.DesignTicTacToeOld;
 
-import LowLevelDesign.DesignTicTacToe.model.*;
-import LowLevelDesign.DesignTicTacToe.strategy.BasicMove;
-import LowLevelDesign.DesignTicTacToe.strategy.Move;
+import LowLevelDesign.DesignTicTacToeOld.model.*;
+import LowLevelDesign.DesignTicTacToeOld.strategy.BasicMove;
+import LowLevelDesign.DesignTicTacToeOld.strategy.Move;
 
 
 import java.util.*;

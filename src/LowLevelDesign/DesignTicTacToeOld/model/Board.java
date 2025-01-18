@@ -1,7 +1,7 @@
-package LowLevelDesign.DesignTicTacToe.model;
+package LowLevelDesign.DesignTicTacToeOld.model;
 
 
-import LowLevelDesign.DesignTicTacToe.Pair;
+import LowLevelDesign.DesignTicTacToeOld.Pair;
 
 import java.util.ArrayList;
 import java.util.List;

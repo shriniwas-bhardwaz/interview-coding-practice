@@ -1,6 +1,6 @@
-package LowLevelDesign.DesignTicTacToe.strategy;
+package LowLevelDesign.DesignTicTacToeOld.strategy;
 
-import LowLevelDesign.DesignTicTacToe.model.Board;
+import LowLevelDesign.DesignTicTacToeOld.model.Board;
 
 public class BasicMove implements Move{
     @Override

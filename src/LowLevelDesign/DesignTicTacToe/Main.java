@@ -1,9 +1,12 @@
 package LowLevelDesign.DesignTicTacToe;
 
+
+
 public class Main {
     public static void main(String[] args) {
-        TicTacToeGame game = new TicTacToeGame();
-        System.out.println("game winner is:"+ game.startGame());
-        game.displayStatistics();
+        GameController controller = GameController.getInstance();
+        int gameId = controller.createGame(3, GameMode.HUMAN_VS_HOME);
+        controller.startGame(gameId);
+
     }
 }

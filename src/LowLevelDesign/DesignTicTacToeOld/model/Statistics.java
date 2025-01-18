@@ -1,4 +1,4 @@
-package LowLevelDesign.DesignTicTacToe.model;
+package LowLevelDesign.DesignTicTacToeOld.model;
 
 public class Statistics {
     private int wins;

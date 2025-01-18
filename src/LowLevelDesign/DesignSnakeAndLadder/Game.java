@@ -27,7 +27,7 @@ public class Game {
     public synchronized void playerTurn(Player player, DiceStrategy dice, Board board) {
         while(players.get(currentPlayerIndex) != player) {
             try {
-                wait();;
+                wait();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
