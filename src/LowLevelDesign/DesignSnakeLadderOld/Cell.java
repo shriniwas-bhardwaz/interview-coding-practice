@@ -1,4 +1,4 @@
-package LowLevelDesign.DesignSnakeLadder;
+package LowLevelDesign.DesignSnakeLadderOld;
 
 public class Cell {
 

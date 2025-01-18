@@ -1,4 +1,4 @@
-package LowLevelDesign.DesignSnakeLadder;
+package LowLevelDesign.DesignSnakeLadderOld;
 
 import java.util.Deque;
 import java.util.LinkedList;

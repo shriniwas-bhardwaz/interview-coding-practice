@@ -1,0 +1,19 @@
+Features Required:
+
+1. Board Initialization: A board with a predefined size.
+2. Players: Multiple players can play the game.
+3. Snakes and Ladders: Random placement of snakes and ladders.
+4. Dice Roll: A player can roll a dice and move accordingly.
+5. Game Logic: Movement according to dice roll and handling snakes and ladders.
+
+Design Patterns Involved:
+
+Singleton Pattern: Used for creating a single instance of the board to ensure that all players interact with the same board.
+Factory Pattern: Used to create snakes and ladders on the board.
+Observer Pattern: Used to notify players about their turns.
+Strategy Pattern: Used to define the dice rolling strategy, which can be changed dynamically.
+
+In the entire game we are moving that is changing the player position.
+So as to encapsulate this move as an object we are going to use command pattern.
+Command Pattern: Used to encapsulate a request as an object to parameterize clients with queues, requests, and operations.
+

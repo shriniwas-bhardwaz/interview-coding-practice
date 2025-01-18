@@ -1,0 +1,7 @@
+Features Required :
+
+1. Board initialization : A board with predefined size.
+2. Players : Multiple players can play the game.
+3. Snakes and Ladders : Random placement of snakes and ladders.
+4. Dice Roll : A player can roll a dice and move accordingly.
+5. Game logic
