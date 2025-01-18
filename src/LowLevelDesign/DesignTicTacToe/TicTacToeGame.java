@@ -1,6 +1,8 @@
 package LowLevelDesign.DesignTicTacToe;
 
 import LowLevelDesign.DesignTicTacToe.model.*;
+import LowLevelDesign.DesignTicTacToe.strategy.BasicMove;
+import LowLevelDesign.DesignTicTacToe.strategy.Move;
 
 
 import java.util.*;
@@ -9,6 +11,7 @@ public class TicTacToeGame {
 
     Deque<Player> players;
     Board gameBoard;
+    private Move moveStrategy;
 
     Map<PieceType,int[]> rowCounter;
     Map<PieceType,int[]> colCounter;
@@ -16,8 +19,10 @@ public class TicTacToeGame {
     Map<PieceType,Integer> antiDiagonalCounter;
 
 
+
     public TicTacToeGame() {
         initializeGame();
+        this.moveStrategy = new BasicMove();
     }
 
     public void initializeGame() {
@@ -82,7 +87,7 @@ public class TicTacToeGame {
             int inputColumn = Integer.parseInt(values[1]);
 
             // place the Piece
-            boolean pieceAddedSuccessfully =  gameBoard.addPiece(inputRow,inputColumn,playerTurn.getPlayingPiece());
+            boolean pieceAddedSuccessfully =  moveStrategy.isValidMove(gameBoard,inputRow,inputColumn);
             if(!pieceAddedSuccessfully) {
                 //player cannot insert the piece into this cell, player has to choose another cell
 
@@ -91,13 +96,32 @@ public class TicTacToeGame {
                 continue;
             }
 
+            gameBoard.getBoard()[inputRow][inputColumn] = playerTurn.getPlayingPiece();
             players.addLast(playerTurn);
             boolean winner = isThereWinner(inputRow,inputColumn,playerTurn.getPlayingPiece().getPieceType());
             if(winner) {
+                playerTurn.getStatistics().incrementWins();
+
+                players.stream()
+                        .filter(p -> !p.equals(playerTurn))
+                        .findFirst()
+                        .ifPresent(otherPlayer -> otherPlayer.getStatistics().incrementLosses());
                 return playerTurn.getName();
             }
         }
+        for(Player player : players) {
+            player.getStatistics().incrementDraws();
+        }
         return "tie";
+    }
+
+    public void displayStatistics() {
+        for (Player player : players) {
+            System.out.println("Player: " + player.getName() +
+                    ", Wins: " + player.getStatistics().getWins() +
+                    ", Losses: " + player.getStatistics().getLosses() +
+                    ", Draws: " + player.getStatistics().getDraws());
+        }
     }
 
     public boolean isThereWinner(int row, int column, PieceType piece) {

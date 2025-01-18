@@ -1,12 +1,14 @@
 package LowLevelDesign.DesignTicTacToe.model;
 
 public class Player {
-    String name;
-    PlayingPiece piece;
+    private String name;
+    private PlayingPiece piece;
+    private Statistics statistics;
 
     public Player(String name, PlayingPiece piece) {
         this.name = name;
         this.piece = piece;
+        this.statistics = new Statistics();
     }
 
     public String getName() { return name; }
@@ -17,4 +19,11 @@ public class Player {
 
     public void setPlayingPiece(PlayingPiece piece) { this.piece = piece; }
 
+    public Statistics getStatistics() {
+        return  this.statistics;
+    }
+
+    public void setStatistics(Statistics statistics) {
+        this.statistics = statistics;
+    }
 }

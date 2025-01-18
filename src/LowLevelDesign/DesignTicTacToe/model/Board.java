@@ -39,14 +39,6 @@ public class Board {
        return freeCells;
     }
 
-    public boolean addPiece(int row,int column,PlayingPiece piece) {
-       try {if(board[row][column] != null) { return false; }
-       board[row][column] = piece;
-       return true;} catch(Exception e) {
-           return false;
-       }
-    }
-
 
     public void printBoard() {
 
