@@ -1,0 +1,14 @@
+Features Required :
+- Initialization : Ability to initialize a new game.
+- Move Validation : Check if a move is valid
+- Board update : Update the board with player's move
+- Win condition : Check for win condition
+- Draw condition : Check for draw conditon
+- Player Switching : Switch between players after each move
+
+Design Patterns :
+- Singleton Pattern : To ensure there is only one instance of the game controller.
+- Factory Pattern : To create player instances.
+- Observer Pattern : To notify players of the game state changes.
+- Strategy Pattern : To encapsulate the algorithm for
+                      move validation and wind/draw condition checking.

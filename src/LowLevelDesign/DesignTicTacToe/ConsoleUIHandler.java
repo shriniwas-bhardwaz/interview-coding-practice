@@ -1,6 +1,5 @@
 package LowLevelDesign.DesignTicTacToe;
 
-import java.util.Scanner;
 
 public class ConsoleUIHandler implements UIHandler{
 
@@ -22,14 +21,5 @@ public class ConsoleUIHandler implements UIHandler{
         }
     }
 
-    @Override
-    public int[] getMove() {
-        System.out.println("Enter your move (row and column): ");
-        Scanner inputScanner = new Scanner(System.in);
-        String s = inputScanner.nextLine();
-        String[] values = s.split(",");
-        int inputRow = Integer.parseInt(values[0]);
-        int inputColumn = Integer.parseInt(values[1]);
-        return new int[]{inputRow, inputColumn};
-    }
+
 }

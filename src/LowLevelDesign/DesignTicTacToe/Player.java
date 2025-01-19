@@ -1,17 +1,21 @@
 package LowLevelDesign.DesignTicTacToe;
 
 /*
-We will yse the Factory pat
+We will yse the Factory pattern
  */
 public abstract class Player {
 
+    protected String name;
     protected char symbol;
 
+    public String getName() {
+        return  this.name;
+    }
     public char getSymbol() {
         return symbol;
     }
 
-    public abstract void makeMove(Board board);
+    public abstract int[] makeMove(Board board);
 
-    public abstract void update(Board board);
+    public abstract void update(Board board,Player player);
 }

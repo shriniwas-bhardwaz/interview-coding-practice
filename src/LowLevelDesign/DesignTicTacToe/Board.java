@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* We will use the Observer pattern to notify players of the game state changes. */
-
 public class Board {
     private char[][] board;
     private List<Player> observers = new ArrayList<>();
@@ -17,15 +16,16 @@ public class Board {
         observers.add(player);
     }
 
-    public void notifyObservers() {
-        for (Player player : observers) {
-            player.update(this);
-        }
+
+    public void updateBoard(int x, int y, char symbol,Player player) {
+        board[x][y] = symbol;
+        notifyObservers(player);
     }
 
-    public void updateBoard(int x, int y, char symbol) {
-        board[x][y] = symbol;
-        notifyObservers();
+    public void notifyObservers(Player playerTurn) {
+        for (Player player : observers) {
+            if(player != playerTurn) player.update(this,player);
+        }
     }
 
     public char getCell(int x, int y) {

@@ -5,7 +5,7 @@ import java.util.Map;
 
 /* We will use the Singleton pattern to
 ensure that there is only one instance of the game controller.
-*/
+Multiple tic tac toe games can run simultaneously */
 public class GameController {
 
     private static GameController instance;

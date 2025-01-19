@@ -2,12 +2,12 @@ package LowLevelDesign.DesignTicTacToe;
 
 public class PlayerFactory {
 
-    public static Player createPlayer(char symbol,boolean isMachine) {
+    public static Player createPlayer(char symbol, String name,boolean isMachine) {
        if(isMachine) {
-           return  new AIPlayer(symbol);
+           return  new AIPlayer(name,symbol);
        }
        else
-           return  new HumanPlayer(symbol);
+           return  new HumanPlayer(name,symbol);
     }
 
 }
