@@ -1,0 +1,25 @@
+Payment Gateway acts as a mediator between User and Financial institution and
+helps to transfer money.
+- Peer to Peer
+- Peer to Merchant
+
+1. Clarify the requirements / Understand the flow
+App
+- User can be Added / Updated / Deleted
+- Instrument can be Added / Updated / Deleted - Bank, Card , etc.
+- Make Payment from U1 to U2
+    - Search User to whom Amount need to be transferred
+    - Select Amount and Funding Instrument
+    - Pass information to Processor
+
+- Notification for operations like Add/Remove User, Debit Payment, Credit Payment etc..
+- Users able to see transaction history
+
+
+2. Main entity involved in the above flow
+- User
+- Instrument - Bank , Card
+- Transaction
+- Transaction History
+- Notification
+- Processor

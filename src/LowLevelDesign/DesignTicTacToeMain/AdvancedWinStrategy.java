@@ -21,12 +21,12 @@ public class AdvancedWinStrategy implements WinStrategy{
         diagonalCounter = new HashMap<>();
         antiDiagonalCounter = new HashMap<>();
 
-        List<Character> symbols = Arrays.asList('X','O');
-        for(char ch: symbols) {
-            rowCounter.put(ch,new int[3]);
-            colCounter.put(ch,new int[3]);
-            diagonalCounter.put(ch,0);
-            antiDiagonalCounter.put(ch,0);
+        PlayingPiece[] symbols = PlayingPiece.values();
+        for(PlayingPiece ch: symbols) {
+            rowCounter.put(ch.getSymbol(),new int[3]);
+            colCounter.put(ch.getSymbol(),new int[3]);
+            diagonalCounter.put(ch.getSymbol(),0);
+            antiDiagonalCounter.put(ch.getSymbol(),0);
         }
 
     }
