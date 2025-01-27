@@ -23,8 +23,8 @@ public class ObstacleFactory {
     public static void createLadders(Board board, int numberOfLadders) {
         while(numberOfLadders>0) {
 
-            int ladderHead = ThreadLocalRandom.current().nextInt(1,board.getSize()*board.getSize()-1);
-            int ladderTail = ThreadLocalRandom.current().nextInt(1,board.getSize()*board.getSize()-1);
+            int ladderHead = ThreadLocalRandom.current().nextInt(1,board.getSize()-1);
+            int ladderTail = ThreadLocalRandom.current().nextInt(1,board.getSize()-1);
 
             if(ladderHead >= ladderTail) {
                 continue;
