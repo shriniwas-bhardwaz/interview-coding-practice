@@ -17,8 +17,9 @@ public class WordDirectoy implements Iterator<String> {
         this.fileQueue = new LinkedList<>();
         this.bufferedReader = null;
 
-        collectFilesLastFirst(new File(rootDirectory));  // Use in case of Dfs
-//        collectFiles(new File(rootDirectory));    Use in case of Bfs
+//        collectFilesLastFirst(new File(rootDirectory));  // Use in case of Dfs
+        collectFiles(new File(rootDirectory)); // Use in case of Bfs
+
 
         try {
             loadNextFile();
@@ -58,7 +59,7 @@ public class WordDirectoy implements Iterator<String> {
             File[] files = currentDir.listFiles();
 
             if (files != null) {
-                List<File> subDirectories = new ArrayList<>();
+                List<File> subDirectories = new ArrayList<>();  // You can forget this at starting
                 List<File> fileList = new ArrayList<>();
 
                 // Separate files and directories
@@ -77,7 +78,7 @@ public class WordDirectoy implements Iterator<String> {
                     directoryStack.push(subDir);
                 }
 
-                // Now process the files **after all subdirectories are handled**
+                // Now process the files after all subdirectories are handled**
                 for (File file : fileList) {
                     fileQueue.offer(file);
                 }
@@ -90,7 +91,7 @@ public class WordDirectoy implements Iterator<String> {
 
 
     private void loadNextFile() throws  IOException {
-        if(bufferedReader != null)  bufferedReader.close();
+        if(bufferedReader != null)  bufferedReader.close();  // Forget to close at starting
 
         while(!fileQueue.isEmpty()) {
             File file = fileQueue.poll();  // Change to peek() while writing the code
